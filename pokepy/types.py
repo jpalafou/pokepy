@@ -1,6 +1,6 @@
 from .constants import POKEMON_TYPE
 
-def grass_effectiveness(defender: POKEMON_TYPE):
+def _grass_effectiveness(defender: POKEMON_TYPE):
     match defender:
         case "grass":
             return 0.5
@@ -10,7 +10,7 @@ def grass_effectiveness(defender: POKEMON_TYPE):
             return 2.0
     return 1.0
 
-def fire_effectiveness(defender: POKEMON_TYPE):
+def _fire_effectiveness(defender: POKEMON_TYPE):
     match defender:
         case "grass":
             return 2.0
@@ -20,7 +20,7 @@ def fire_effectiveness(defender: POKEMON_TYPE):
             return 0.5
     return 1.0
 
-def water_effectiveness(defender: POKEMON_TYPE):
+def _water_effectiveness(defender: POKEMON_TYPE):
     match defender:
         case "grass":
             return 0.5
@@ -33,10 +33,10 @@ def water_effectiveness(defender: POKEMON_TYPE):
 def type_effectiveness(attacker: POKEMON_TYPE, defender: POKEMON_TYPE) -> float:
     match attacker:
         case "grass":
-            return grass_effectiveness(defender)
+            return _grass_effectiveness(defender)
         case "fire":
-            return fire_effectiveness(defender)
+            return _fire_effectiveness(defender)
         case "water":
-            return water_effectiveness(defender)
+            return _water_effectiveness(defender)
     return 1.0
                 
