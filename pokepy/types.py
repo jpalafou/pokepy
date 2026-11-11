@@ -30,7 +30,7 @@ def _water_effectiveness(defender: POKEMON_TYPE):
             return 0.5
     return 1.0
 
-def type_effectiveness(attacker: POKEMON_TYPE, defender: POKEMON_TYPE) -> float:
+def lookup_effectiveness(attacker: POKEMON_TYPE, defender: POKEMON_TYPE) -> float:
     match attacker:
         case "grass":
             return _grass_effectiveness(defender)
