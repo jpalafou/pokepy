@@ -1,0 +1,29 @@
+princetonpy talk
+
+tools i use
+- VS code (particular the Source Control tab and the Git Graph extension)
+- codex
+
+outline
+- walk through existing bare bones pokepy repo
+- initialize codex. show /permissions, /status, /model. don’t forget to use ‘codex agents’ to return to that instance
+- have codex write a simple README.md on main and commit it as codeself. show Git Graph
+- create a new branch ‘level’. have codex add support for attacking pokemon level. the 20 in the damage formula becomes 2 * level / 5.
+- have it revise the changes Pokemon init should have a default level 50.
+- return to ‘main’ branch. have codex add support for special attack and defense and special vs. physical moves.
+- merge ‘special’ into ‘main’. resolve conflicts. git merge --continue. show tree
+- git reset and repeat example with a rebase. git rebase --continue. show tree
+- push ‘main’ branch to remote
+- push ‘special’ branch to remote
+- discuss wip commit or cache and soft reset hack for better workflow
+
+git commands to understand when accessing a remote
+	git remote -v
+	git pull
+	git pull --rebase
+	git push
+	git push --set-upstream <remote> <branch>
+
+if time and interest permit
+- fork repo and show how to run two remotes
+
